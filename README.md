@@ -48,3 +48,7 @@ A*算法的过程如下：
 # Demo运行结果
 
 <img src="./images/demo.gif" />
+
+# Demo Apk下载
+
+![](https://www.pgyer.com/app/qrcode/GkwD)
