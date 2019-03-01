@@ -27,6 +27,4 @@ A*算法的过程如下：
 
 # Demo运行结果
 
-<video id="video" controls="" preload="none" poster="./images/index.jpg">
-    <source id="mp4" src="./images/demo.mp4" type="video/mp4">
-</video>
+[![Watch the video](https://raw.githubusercontent.com/yubo725/find-path-demo/master/images/index.jpg)](https://raw.githubusercontent.com/yubo725/find-path-demo/master/images/demo.mp4)
