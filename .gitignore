@@ -9,3 +9,5 @@
 /build
 /captures
 .externalNativeBuild
+
+/app/my-release-key.keystore
