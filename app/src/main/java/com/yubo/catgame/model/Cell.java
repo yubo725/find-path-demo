@@ -32,10 +32,10 @@ public class Cell {
     private boolean isCat = false;
     private boolean isBone = false;
 
-    // 是否已计算过G, H值
-    private boolean isCalculated = false;
-
     private int G = 0, H = 0;
+
+    // 保存该节点的父节点
+    private Cell parent;
 
     public Cell(Context context, boolean isWall, int posX, int posY) {
         this.context = context;
@@ -61,8 +61,12 @@ public class Cell {
         this.textPaint.setTextSize(TEXT_SIZE);
     }
 
-    public void setSelected() {
-        this.fillPaint.setColor(Color.parseColor("#6699FF"));
+    public void setBgColor(int color) {
+        this.fillPaint.setColor(color);
+    }
+
+    public void resetColor() {
+        this.fillPaint.setColor(isWall ? wallColor : roadColor);
     }
 
     public void drawMe(Canvas canvas) {
@@ -121,14 +125,6 @@ public class Cell {
         isBone = bone;
     }
 
-    public boolean isCalculated() {
-        return isCalculated;
-    }
-
-    public void setCalculated(boolean calculated) {
-        isCalculated = calculated;
-    }
-
     public int getG() {
         return G;
     }
@@ -143,5 +139,33 @@ public class Cell {
 
     public void setH(int h) {
         H = h;
+    }
+
+    public int getF() {
+        return G + H;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+    public Cell getParent() {
+        return parent;
+    }
+
+    public void setParent(Cell parent) {
+        this.parent = parent;
     }
 }

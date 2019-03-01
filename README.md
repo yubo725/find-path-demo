@@ -27,4 +27,6 @@ A*算法的过程如下：
 
 # Demo运行结果
 
-<img src="./images/result.jpg" />
+<video id="video" controls="" preload="none" poster="./images/index.jpg">
+    <source id="mp4" src="./images/demo.mp4" type="video/mp4">
+</video>
